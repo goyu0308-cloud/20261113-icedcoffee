@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뜨거운 커피의 본고장에도 'ICE'가 일상이 됐다 | 커피 트렌드 리포트</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Noto Serif KR & Pretendard -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- Tailwind Config for Custom Colors & Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'sans-serif'],
+                        serif: ['"Noto Serif KR"', 'Georgia', 'serif'],
+                    },
+                    colors: {
+                        espresso: {
+                            950: '#120B07',
+                            900: '#1E140E',
+                            800: '#2E1F16',
+                            700: '#4A3325',
+                            600: '#6E4E3B',
+                        },
+                        latte: {
+                            50: '#FBF8F3',
+                            100: '#F4EFE6',
+                            200: '#E8DEC8',
+                            300: '#D4C2A3',
+                            400: '#B89E78',
+                        },
+                        ice: {
+                            50: '#F0F9FF',
+                            100: '#E0F2FE',
+                            200: '#BAE6FD',
+                            400: '#38BDF8',
+                            500: '#0EA5E9',
+                            600: '#0284C7',
+                            900: '#0C4A6E',
+                        }
+                    },
+                    animation: {
+                        'float-slow': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 7s ease-in-out 2s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-12px) rotate(4deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* 커스텀 스크롤바 숨김 */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* 스크롤 등장 애니메이션 */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 프로그레스 바 트랜지션 */
+        .bar-fill {
+            transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* 얼음 큐브 글래스모피즘 효과 */
+        .ice-glass {
+            background: rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            box-shadow: 0 8px 32px 0 rgba(14, 165, 233, 0.18);
+        }
+    </style>
+</head>
+<body class="bg-[#FBF8F3] text-[#1E140E] font-sans antialiased selection:bg-ice-200 selection:text-espresso-950">
+
+    <!-- 상단 읽기 진행률 표시줄 -->
+    <div class="fixed top-0 left-0 w-full h-1.5 z-50 bg-[#1E140E]/10">
+        <div id="reading-progress" class="h-full bg-gradient-to-r from-[#4A3325] via-[#0EA5E9] to-[#38BDF8] w-0 transition-all duration-150"></div>
+    </div>
+
+    <!-- =====================================================================
+         HERO SECTION: 메인 타이틀 및 비주얼 배너
+    ====================================================================== -->
+    <header class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#1E140E] text-[#FBF8F3]">
+        <!-- 배경 아이스커피 사진 및 우아한 SVG/그라데이션 폴백 -->
+        <div class="absolute inset-0 z-0 bg-gradient-to-br from-[#120B07] via-[#1E140E] to-[#0C4A6E]">
+            <img 
+                src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=2000&q=85" 
+                alt="얼음이 가득 담긴 시원한 아이스커피" 
+                onerror="this.style.display='none';"
+                class="w-full h-full object-cover object-center opacity-50 scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-b from-[#1E140E]/80 via-[#1E140E]/65 to-[#1E140E]"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.22),transparent_55%)]"></div>
+        </div>
+
+        <!-- 떠다니는 얼음 큐브 SVG 장식 -->
+        <div class="hidden md:block absolute top-24 left-[10%] z-10 animate-float-slow pointer-events-none opacity-80">
+            <svg width="76" height="76" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="14" y="14" width="52" height="52" rx="14" transform="rotate(-12 14 14)" fill="url(#iceGrad1)" stroke="rgba(255,255,255,0.55)" stroke-width="1.5"/>
+                <path d="M22 24C28 20 38 20 46 23" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
+                <defs>
+                    <linearGradient id="iceGrad1" x1="14" y1="14" x2="66" y2="66" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#E0F2FE" stop-opacity="0.38"/>
+                        <stop offset="1" stop-color="#0EA5E9" stop-opacity="0.12"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="hidden md:block absolute bottom-28 right-[12%] z-10 animate-float-delayed pointer-events-none opacity-85">
+            <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="10" width="56" height="56" rx="16" transform="rotate(15 20 10)" fill="url(#iceGrad2)" stroke="rgba(186,230,253,0.65)" stroke-width="1.5"/>
+                <circle cx="48" cy="36" r="4" fill="white" fill-opacity="0.45"/>
+                <defs>
+                    <linearGradient id="iceGrad2" x1="20" y1="10" x2="76" y2="66" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#BAE6FD" stop-opacity="0.42"/>
+                        <stop offset="1" stop-color="#0EA5E9" stop-opacity="0.1"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <!-- 히어로 콘텐츠 컨테이너 -->
+        <div class="relative z-10 max-w-4xl mx-auto px-6 py-20 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full ice-glass text-ice-200 text-xs sm:text-sm font-semibold tracking-wider uppercase mb-8">
+                <span class="w-2 h-2 rounded-full bg-[#0EA5E9] animate-pulse"></span>
+                <span>EDITORIAL COFFEE TREND REPORT</span>
+            </div>
+
+            <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold leading-[1.24] tracking-tight text-white mb-6">
+                뜨거운 커피의 본고장에도<br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-ice-200 via-[#0EA5E9] to-latte-200">'ICE'</span>가 일상이 됐다
+            </h1>
+
+            <p class="text-base sm:text-xl md:text-2xl text-latte-200/95 font-light max-w-2xl mx-auto leading-relaxed mb-12">
+                에스프레소만 마시던 유럽인들의 달라진 커피 공식,<br class="hidden sm:inline" />
+                그리고 한국의 '얼죽아' 트렌드
+            </p>
+
+            <!-- 요약 하이라이트 미니 카드 3종 -->
+            <div class="grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl mx-auto pt-6 border-t border-white/15">
+                <div class="p-3 sm:p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                    <div class="text-[#38BDF8] font-bold text-xl sm:text-3xl">+44%</div>
+                    <div class="text-latte-300 text-xs sm:text-sm mt-1">네덜란드 판매 증가</div>
+                </div>
+                <div class="p-3 sm:p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                    <div class="text-[#38BDF8] font-bold text-xl sm:text-3xl">32%</div>
+                    <div class="text-latte-300 text-xs sm:text-sm mt-1">영국인 아이스 선호</div>
+                </div>
+                <div class="p-3 sm:p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                    <div class="text-latte-200 font-bold text-xl sm:text-3xl">60%</div>
+                    <div class="text-latte-300 text-xs sm:text-sm mt-1">한국 한겨울 아이스 비중</div>
+                </div>
+            </div>
+
+            <!-- 아래로 스크롤 유도 버튼 -->
+            <div class="mt-14">
+                <a href="#section-01" class="inline-flex flex-col items-center gap-2 text-latte-300 hover:text-ice-300 transition-colors group">
+                    <span class="text-xs tracking-widest uppercase">리포트 스크롤</span>
+                    <span class="w-9 h-9 rounded-full border border-white/25 flex items-center justify-center group-hover:border-[#0EA5E9] group-hover:translate-y-1 transition-all">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================================================================
+         STICKY NAVIGATION BAR: 섹션 바로가기 필 바
+    ====================================================================== -->
+    <nav aria-label="섹션 내비게이션" class="sticky top-0 z-40 bg-[#FBF8F3]/95 backdrop-blur-md border-b border-latte-200/80 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 py-3">
+            <div class="flex items-center justify-start md:justify-center gap-2 overflow-x-auto no-scrollbar" id="nav-pills">
+                <a href="#section-01" data-target="section-01" class="nav-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-[#1E140E] text-white shadow-sm">
+                    01 유럽서 판매 급증
+                </a>
+                <a href="#section-02" data-target="section-02" class="nav-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-espresso-700 hover:bg-latte-200/70 transition-all">
+                    02 틈새에서 대중으로
+                </a>
+                <a href="#section-03" data-target="section-03" class="nav-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-espresso-700 hover:bg-latte-200/70 transition-all">
+                    03 왜 갑자기?
+                </a>
+                <a href="#section-04" data-target="section-04" class="nav-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-espresso-700 hover:bg-latte-200/70 transition-all">
+                    04 한국은 사계절 ICE
+                </a>
+                <a href="#section-05" data-target="section-05" class="nav-pill shrink-0 px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-espresso-700 hover:bg-latte-200/70 transition-all">
+                    05 커피 공식이 바뀐다
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =====================================================================
+         MAIN CONTENT: 5개 핵심 에디토리얼 섹션
+    ====================================================================== -->
+    <main class="max-w-5xl mx-auto px-5 sm:px-8 py-14 sm:py-24 space-y-24 sm:space-y-32">
+
+        <!-- -----------------------------------------------------------------
+             SECTION 01 | 유럽서 판매 급증
+        ------------------------------------------------------------------ -->
+        <section id="section-01" class="scroll-mt-24 reveal-up">
+            <div class="flex flex-col lg:flex-row gap-10 lg:gap-12 items-stretch">
+                
+                <!-- 왼쪽: 텍스트 및 인터랙티브 데이터 바 차트 -->
+                <div class="flex-1 flex flex-col justify-between">
+                    <div>
+                        <div class="inline-flex items-center gap-2 text-[#0EA5E9] font-bold text-sm tracking-wider uppercase mb-3">
+                            <span class="px-2.5 py-1 rounded-md bg-ice-100 text-ice-900">01 | 유럽서 판매 급증</span>
+                        </div>
+                        <h2 class="font-serif text-2xl sm:text-4xl font-bold text-[#1E140E] leading-snug mb-4">
+                            에스프레소만 마시던 유럽인들,<br />
+                            요즘은 <span class="text-[#0EA5E9]">'아이스커피'</span>
+                        </h2>
+                        <p class="text-espresso-700 text-base sm:text-lg leading-relaxed mb-8">
+                            따뜻한 커피가 익숙한 유럽에서 아이스커피 판매가 빠르게 늘고 있습니다.
+                        </p>
+                    </div>
+
+                    <!-- 유럽 주요국 판매량 증가율 인포그래픽 카드 -->
+                    <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-latte-200/90" id="europe-chart-card">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="font-bold text-[#1E140E] text-base sm:text-lg flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-[#0EA5E9]"></span>
+                                주요국 아이스커피 판매량 증가율
+                            </h3>
+                            <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-latte-100 text-espresso-700">2~8월 전년 대비</span>
+                        </div>
+
+                        <div class="space-y-5" id="europe-bars">
+                            <!-- 네덜란드 +44% -->
+                            <div class="group cursor-pointer p-2.5 -mx-2.5 rounded-xl hover:bg-ice-50/70 transition-colors" onclick="highlightCountry(this)">
+                                <div class="flex justify-between items-end mb-2">
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="text-xl" aria-hidden="true">🇳🇱</span>
+                                        <span class="font-bold text-[#1E140E] text-base">네덜란드</span>
+                                        <span class="text-xs px-2 py-0.5 rounded-full bg-ice-100 text-ice-900 font-semibold">1위</span>
+                                    </div>
+                                    <span class="font-serif font-bold text-2xl text-[#0EA5E9] counter" data-prefix="+" data-target="44" data-suffix="%">+0%</span>
+                                </div>
+                                <div class="w-full h-3.5 bg-latte-100 rounded-full overflow-hidden">
+                                    <div class="bar-fill h-full rounded-full bg-gradient-to-r from-[#0EA5E9] to-[#38BDF8]" style="width: 0%" data-width="100%"></div>
+                                </div>
+                            </div>
+
+                            <!-- 영국 +39% -->
+                            <div class="group cursor-pointer p-2.5 -mx-2.5 rounded-xl hover:bg-ice-50/70 transition-colors" onclick="highlightCountry(this)">
+                                <div class="flex justify-between items-end mb-2">
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="text-xl" aria-hidden="true">🇬🇧</span>
+                                        <span class="font-bold text-[#1E140E] text-base">영국</span>
+                                    </div>
+                                    <span class="font-serif font-bold text-2xl text-[#0EA5E9] counter" data-prefix="+" data-target="39" data-suffix="%">+0%</span>
+                                </div>
+                                <div class="w-full h-3.5 bg-latte-100 rounded-full overflow-hidden">
+                                    <div class="bar-fill h-full rounded-full bg-gradient-to-r from-ice-600 to-[#38BDF8]" style="width: 0%" data-width="88.6%"></div>
+                                </div>
+                            </div>
+
+                            <!-- 프랑스 +20% -->
+                            <div class="group cursor-pointer p-2.5 -mx-2.5 rounded-xl hover:bg-ice-50/70 transition-colors" onclick="highlightCountry(this)">
+                                <div class="flex justify-between items-end mb-2">
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="text-xl" aria-hidden="true">🇫🇷</span>
+                                        <span class="font-bold text-[#1E140E] text-base">프랑스</span>
+                                    </div>
+                                    <span class="font-serif font-bold text-2xl text-espresso-800 counter" data-prefix="+" data-target="20" data-suffix="%">+0%</span>
+                                </div>
+                                <div class="w-full h-3.5 bg-latte-100 rounded-full overflow-hidden">
+                                    <div class="bar-fill h-full rounded-full bg-gradient-to-r from-[#4A3325] to-[#6E4E3B]" style="width: 0%" data-width="45.5%"></div>
+                                </div>
+                            </div>
+
+                            <!-- 독일 +19% -->
+                            <div class="group cursor-pointer p-2.5 -mx-2.5 rounded-xl hover:bg-ice-50
