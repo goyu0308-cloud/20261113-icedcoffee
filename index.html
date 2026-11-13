@@ -302,4 +302,648 @@
                             </div>
 
                             <!-- 독일 +19% -->
-                            <div class="group cursor-pointer p-2.5 -mx-2.5 rounded-xl hover:bg-ice-50
+                            <div class="group cursor-pointer p-2.5 -mx-2.5 rounded-xl hover:bg-ice-50/70 transition-colors" onclick="highlightCountry(this)">
+                                <div class="flex justify-between items-end mb-2">
+                                    <div class="flex items-center gap-2.5">
+                                        <span class="text-xl" aria-hidden="true">🇩🇪</span>
+                                        <span class="font-bold text-[#1E140E] text-base">독일</span>
+                                    </div>
+                                    <span class="font-serif font-bold text-2xl text-espresso-800 counter" data-prefix="+" data-target="19" data-suffix="%">+0%</span>
+                                </div>
+                                <div class="w-full h-3.5 bg-latte-100 rounded-full overflow-hidden">
+                                    <div class="bar-fill h-full rounded-full bg-gradient-to-r from-[#4A3325] to-[#6E4E3B]" style="width: 0%" data-width="43.2%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="mt-6 pt-4 border-t border-latte-100 text-xs text-espresso-600 leading-relaxed">
+                            출처: 룩셈부르크 시장조사업체 파이어(Fyre) · 2~8월 아이스커피 판매량 전년 대비 증가율
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 오른쪽: 바리스타 포토 에디토리얼 카드 (우아한 SVG/그라데이션 폴백 내장) -->
+                <div class="lg:w-[44%] flex">
+                    <figure class="relative w-full rounded-3xl overflow-hidden shadow-md group min-h-[380px] sm:min-h-[460px] bg-gradient-to-br from-[#2E1F16] via-[#1E140E] to-[#0C4A6E]">
+                        <!-- 이미지 로드 실패 시 보여줄 배경 SVG 일러스트 -->
+                        <div class="absolute inset-0 flex items-center justify-center opacity-25 pointer-events-none">
+                            <svg class="w-48 h-48 text-ice-200" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M35 30H85L79 98C78.5 103 74.5 107 69.5 107H50.5C45.5 107 41.5 103 41 98L35 30Z" stroke="currentColor" stroke-width="2.5"/>
+                                <path d="M30 30H90" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M62 12L58 30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <rect x="46" y="48" width="14" height="14" rx="3" transform="rotate(12 46 48)" stroke="currentColor" stroke-width="2"/>
+                                <rect x="61" y="62" width="14" height="14" rx="3" transform="rotate(-10 61 62)" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <img 
+                            src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?auto=format&fit=crop&w=1000&q=85" 
+                            alt="카페에서 아이스커피를 들고 있는 바리스타" 
+                            onerror="this.style.display='none';"
+                            class="relative z-10 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div class="absolute inset-0 z-20 bg-gradient-to-t from-[#1E140E]/90 via-[#1E140E]/20 to-transparent"></div>
+                        <figcaption class="absolute bottom-0 left-0 right-0 z-30 p-6 sm:p-8 text-white">
+                            <span class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-xs font-medium text-ice-200 mb-2">
+                                EUROPEAN BARISTA SCENE
+                            </span>
+                            <p class="font-serif text-lg sm:text-xl font-semibold">
+                                카페에서 아이스커피를 들고 있는 바리스타
+                            </p>
+                            <p class="text-xs sm:text-sm text-latte-200/85 mt-1">
+                                에스프레소 머신 옆, 얼음 제빙기가 유럽 카페의 필수 설비로 자리 잡고 있습니다.
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- -----------------------------------------------------------------
+             SECTION 02 | 틈새에서 대중으로
+        ------------------------------------------------------------------ -->
+        <section id="section-02" class="scroll-mt-24 reveal-up">
+            <div class="bg-white rounded-[2rem] p-6 sm:p-10 lg:p-12 shadow-sm border border-latte-200/90">
+                <!-- 섹션 헤더 -->
+                <div class="max-w-2xl mb-10">
+                    <div class="inline-flex items-center gap-2 text-[#0EA5E9] font-bold text-sm tracking-wider uppercase mb-3">
+                        <span class="px-2.5 py-1 rounded-md bg-ice-100 text-ice-900">02 | 틈새에서 대중으로</span>
+                    </div>
+                    <h2 class="font-serif text-2xl sm:text-4xl font-bold text-[#1E140E] leading-snug">
+                        영국인 3명 중 1명<br />
+                        아이스커피를 즐긴다
+                    </h2>
+                </div>
+
+                <!-- 2단 그리드: 통계 비주얼 + 야외 카페 사진 -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                    
+                    <!-- 좌측 7컬럼: 통계 카드 & 메뉴 다양화 -->
+                    <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <!-- 32% 카드 + 10명 중 3.2명 비율 아이콘 시각화 -->
+                            <div class="rounded-3xl bg-ice-50/80 border border-ice-200/70 p-6 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-baseline gap-1">
+                                        <span class="font-serif text-4xl sm:text-5xl font-black text-[#0EA5E9] counter" data-target="32" data-suffix="%">0%</span>
+                                    </div>
+                                    <p class="font-bold text-[#1E140E] text-base sm:text-lg mt-2">
+                                        영국 소비자 "아이스커피 즐긴다"
+                                    </p>
+                                </div>
+                                
+                                <!-- 10명 중 3.2명 비율 아이콘 시각화 -->
+                                <div class="mt-6 pt-4 border-t border-ice-200/60">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span class="text-xs font-semibold text-espresso-700">10명 중 3.2명 비율</span>
+                                        <span class="text-xs font-bold text-[#0EA5E9]">32 / 100</span>
+                                    </div>
+                                    <div class="grid grid-cols-10 gap-1" aria-label="10명 중 3.2명 비율 시각화">
+                                        <!-- 활성 3명 -->
+                                        <span class="h-7 rounded-md bg-[#0EA5E9] text-white flex items-center justify-center shadow-xs" title="1">
+                                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/></svg>
+                                        </span>
+                                        <span class="h-7 rounded-md bg-[#0EA5E9] text-white flex items-center justify-center shadow-xs" title="2">
+                                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/></svg>
+                                        </span>
+                                        <span class="h-7 rounded-md bg-[#0EA5E9] text-white flex items-center justify-center shadow-xs" title="3">
+                                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/></svg>
+                                        </span>
+                                        <!-- 0.2명 부분 활성 -->
+                                        <span class="relative h-7 rounded-md bg-ice-200/70 text-ice-900/50 flex items-center justify-center overflow-hidden" title="3.2">
+                                            <span class="absolute inset-y-0 left-0 w-[25%] bg-[#0EA5E9]"></span>
+                                            <svg class="relative z-10 w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/></svg>
+                                        </span>
+                                        <!-- 비활성 6명 -->
+                                        <span class="h-7 rounded-md bg-ice-200/50 text-ice-900/35 flex items-center justify-center">
+                                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/></svg>
+                                        </span>
+                                        <span class="h-7 rounded-md bg-ice-200/50 text-ice-900/35 flex items-center justify-center">
+                                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/></svg>
+                                        </span>
+                                        <span class="h-7 rounded-md bg-ice-200/50 text-ice-900/35 flex items-center justify-center">
+                                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/></svg>
+                                        </span>
+                                        <span class="h-7 rounded-md bg-ice-200/50 text-ice-900/35 flex items-center justify-center">
+                                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/></svg>
+                                        </span>
+                                        <span class="h-7 rounded-md bg-ice-200/50 text-ice-900/35 flex items-center justify-center">
+                                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/></svg>
+                                        </span>
+                                        <span class="h-7 rounded-md bg-ice-200/50 text-ice-900/35 flex items-center justify-center">
+                                            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 55+ 세대 확장 카드 -->
+                            <div class="rounded-3xl bg-latte-100/80 border border-latte-200 p-6 flex flex-col justify-between">
+                                <div>
+                                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-[#1E140E] text-[#FBF8F3] text-xs font-bold mb-3">
+                                        세대 확장
+                                    </div>
+                                    <div class="font-serif text-4xl sm:text-5xl font-black text-[#1E140E]">
+                                        55<span class="text-[#0EA5E9]">+</span>
+                                    </div>
+                                    <p class="font-bold text-[#1E140E] text-base sm:text-lg mt-2">
+                                        젊은 층 넘어 55세 이상 구매도 증가
+                                    </p>
+                                </div>
+                                <p class="mt-6 pt-4 border-t border-latte-200 text-xs text-espresso-700">
+                                    전 연령대로 확산되는 아이스 음료 소비 저변
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 메뉴 다양화 하이라이트 박스 -->
+                        <div class="rounded-3xl bg-[#1E140E] text-[#FBF8F3] p-6 sm:p-7">
+                            <p class="text-base sm:text-lg font-medium leading-relaxed text-latte-100 mb-5">
+                                시럽·과일향은 물론 단백질까지. 아이스커피 메뉴도 빠르게 다양해지고 있습니다.
+                            </p>
+                            <div class="grid grid-cols-3 gap-2.5">
+                                <div class="rounded-2xl bg-white/10 border border-white/15 p-3 text-center">
+                                    <span class="text-lg block mb-1">🍯</span>
+                                    <span class="text-xs sm:text-sm font-semibold text-latte-100">시럽</span>
+                                </div>
+                                <div class="rounded-2xl bg-white/10 border border-white/15 p-3 text-center">
+                                    <span class="text-lg block mb-1">🍊</span>
+                                    <span class="text-xs sm:text-sm font-semibold text-latte-100">과일향</span>
+                                </div>
+                                <div class="rounded-2xl bg-[#0EA5E9]/25 border border-[#38BDF8]/40 p-3 text-center">
+                                    <span class="text-lg block mb-1">💪</span>
+                                    <span class="text-xs sm:text-sm font-semibold text-ice-200">단백질 커피</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-espresso-600">
+                            출처: 닐슨아이큐(NIQ) '2027 음료 시장 보고서' · 영국 소비자 설문
+                        </p>
+                    </div>
+
+                    <!-- 우측 5컬럼: 야외 카페 포토 카드 (우아한 SVG/그라데이션 폴백 내장) -->
+                    <div class="lg:col-span-5 flex">
+                        <figure class="relative w-full rounded-3xl overflow-hidden shadow-md group min-h-[340px] bg-gradient-to-br from-[#4A3325] via-[#2E1F16] to-[#0284C7]">
+                            <!-- 폴백 SVG 그래픽 -->
+                            <div class="absolute inset-0 flex items-center justify-center opacity-25 pointer-events-none">
+                                <svg class="w-44 h-44 text-latte-200" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="60" cy="42" r="18" stroke="currentColor" stroke-width="2.5"/>
+                                    <path d="M25 95C25 78 40 68 60 68C80 68 95 78 95 95" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <img 
+                                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1000&q=85" 
+                                alt="야외 카페에서 아이스커피를 마시는 사람" 
+                                onerror="this.style.display='none';"
+                                class="relative z-10 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                            />
+                            <div class="absolute inset-0 z-20 bg-gradient-to-t from-[#1E140E]/90 via-transparent to-transparent"></div>
+                            <figcaption class="absolute bottom-0 left-0 right-0 z-30 p-6 text-white">
+                                <span class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-xs font-medium text-latte-100 mb-2">
+                                    EUROPEAN TERRACE
+                                </span>
+                                <p class="font-serif text-lg font-semibold">
+                                    야외 카페에서 아이스커피를 마시는 사람
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- -----------------------------------------------------------------
+             SECTION 03 | 왜 갑자기?
+        ------------------------------------------------------------------ -->
+        <section id="section-03" class="scroll-mt-24 reveal-up">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <div class="inline-flex items-center gap-2 text-[#0EA5E9] font-bold text-sm tracking-wider uppercase mb-3">
+                    <span class="px-2.5 py-1 rounded-md bg-ice-100 text-ice-900">03 | 왜 갑자기?</span>
+                </div>
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-[#1E140E] leading-snug">
+                    젊은 취향 <span class="text-[#0EA5E9]">+</span> SNS <span class="text-[#0EA5E9]">+</span> 더워진 유럽
+                </h2>
+                <p class="text-espresso-700 text-sm sm:text-base mt-3">
+                    유럽의 전통적인 커피 문화를 바꾼 세 가지 결정적 동인
+                </p>
+            </div>
+
+            <!-- 3대 원인 카드 그리드 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- ① 취향대로 조합 -->
+                <article class="bg-white rounded-3xl p-7 sm:p-8 border border-latte-200/90 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="w-11 h-11 rounded-2xl bg-latte-100 text-[#1E140E] font-serif font-bold text-lg flex items-center justify-center">
+                                ①
+                            </span>
+                            <div class="w-11 h-11 rounded-2xl bg-ice-50 text-[#0EA5E9] flex items-center justify-center">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-[#1E140E] mb-3">
+                            취향대로 조합
+                        </h3>
+                        <p class="text-espresso-700 text-base leading-relaxed">
+                            젊은 세대는 새로운 메뉴를 시도하는 데 적극적입니다.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-latte-100 text-xs font-semibold text-espresso-600">
+                        커스터마이징 &amp; Z세대 소비 성향
+                    </div>
+                </article>
+
+                <!-- ② SNS에 잘 보이는 음료 -->
+                <article class="bg-white rounded-3xl p-7 sm:p-8 border border-latte-200/90 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="w-11 h-11 rounded-2xl bg-latte-100 text-[#1E140E] font-serif font-bold text-lg flex items-center justify-center">
+                                ②
+                            </span>
+                            <div class="w-11 h-11 rounded-2xl bg-ice-50 text-[#0EA5E9] flex items-center justify-center">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-[#1E140E] mb-3">
+                            SNS에 잘 보이는 음료
+                        </h3>
+                        <p class="text-espresso-700 text-base leading-relaxed">
+                            색감과 비주얼이 강한 아이스 음료가 빠르게 퍼졌습니다.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-latte-100 text-xs font-semibold text-espresso-600">
+                        투명한 컵 속 층을 이루는 비주얼 확산
+                    </div>
+                </article>
+
+                <!-- ③ 점점 더워지는 유럽 -->
+                <article class="bg-gradient-to-br from-[#1E140E] to-[#2E1F16] text-[#FBF8F3] rounded-3xl p-7 sm:p-8 shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="w-11 h-11 rounded-2xl bg-white/10 text-ice-300 font-serif font-bold text-lg flex items-center justify-center">
+                                ③
+                            </span>
+                            <div class="w-11 h-11 rounded-2xl bg-amber-500/20 text-amber-300 flex items-center justify-center">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-3">
+                            점점 더워지는 유럽
+                        </h3>
+                        <p class="text-latte-200 text-base leading-relaxed">
+                            올해 여름 서유럽은 관측 이래 가장 더운 여름을 보냈습니다.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/15 text-xs font-semibold text-ice-300">
+                        기후 변화가 만든 시원한 음료의 일상화
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- -----------------------------------------------------------------
+             SECTION 04 | 한국은 이미 사계절 ICE
+        ------------------------------------------------------------------ -->
+        <section id="section-04" class="scroll-mt-24 reveal-up">
+            <div class="bg-[#1E140E] text-[#FBF8F3] rounded-[2rem] p-6 sm:p-10 lg:p-12 shadow-xl overflow-hidden relative">
+                <!-- 배경 은은한 빙하 블루 빛 효과 -->
+                <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-[#0EA5E9]/20 blur-3xl pointer-events-none"></div>
+
+                <div class="relative z-10 flex flex-col lg:flex-row gap-10 lg:gap-12 items-stretch">
+                    
+                    <!-- 왼쪽: 겨울 패딩 & 아이스커피 이미지 카드 (우아한 SVG/그라데이션 폴백 내장) -->
+                    <div class="lg:w-[42%] flex order-2 lg:order-1">
+                        <figure class="relative w-full rounded-3xl overflow-hidden border border-white/15 group min-h-[360px] bg-gradient-to-b from-[#0C4A6E] via-[#1E140E] to-[#120B07]">
+                            <!-- 폴백 SVG 눈송이 & 아이스컵 일러스트 -->
+                            <div class="absolute inset-0 flex items-center justify-center opacity-25 pointer-events-none">
+                                <svg class="w-44 h-44 text-ice-200" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M60 15V105M15 60H105M28 28L92 92M92 28L28 92" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <circle cx="60" cy="60" r="14" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <img 
+                                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=1000&q=85" 
+                                alt="겨울에 패딩을 입고 아이스커피를 든 한국인" 
+                                onerror="this.style.display='none';"
+                                class="relative z-10 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                            />
+                            <div class="absolute inset-0 z-20 bg-gradient-to-t from-[#120B07]/95 via-[#1E140E]/25 to-transparent"></div>
+                            
+                            <!-- 일러스트 배지: 패딩 + 아이스커피 -->
+                            <div class="absolute top-4 left-4 z-30 px-3.5 py-1.5 rounded-full ice-glass text-xs font-semibold text-white flex items-center gap-1.5">
+                                <span>🧥 + 🧊</span>
+                                <span>K-COFFEE CULTURE</span>
+                            </div>
+
+                            <figcaption class="absolute bottom-0 left-0 right-0 z-30 p-6">
+                                <p class="font-serif text-lg sm:text-xl font-semibold text-white">
+                                    겨울에 패딩을 입고 아이스커피를 든 한국인
+                                </p>
+                                <p class="text-xs sm:text-sm text-latte-300 mt-1">
+                                    영하의 날씨에도 손에서 놓지 않는 아이스 아메리카노
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+                    <!-- 오른쪽: 데이터 및 10잔 중 6잔 인포그래픽 -->
+                    <div class="flex-1 flex flex-col justify-between order-1 lg:order-2">
+                        <div>
+                            <div class="inline-flex items-center gap-2 font-bold text-sm tracking-wider uppercase mb-3">
+                                <span class="px-2.5 py-1 rounded-md bg-[#0EA5E9]/20 text-ice-300 border border-[#38BDF8]/30">04 | 한국은 이미 사계절 ICE</span>
+                            </div>
+                            <h2 class="font-serif text-2xl sm:text-4xl font-bold text-white leading-snug mb-4">
+                                한겨울에도<br />
+                                커피 10잔 중 <span class="text-[#38BDF8]">6잔</span>은 아이스
+                            </h2>
+                            <p class="text-latte-200 text-base sm:text-lg leading-relaxed mb-8">
+                                유럽에선 새 트렌드지만, 한국에선 계절을 타지 않는 일상입니다.
+                            </p>
+                        </div>
+
+                        <!-- 계절별 비교 인포그래픽 -->
+                        <div class="space-y-5">
+                            <!-- 한겨울 60% & 10잔 시각화 -->
+                            <div class="rounded-3xl bg-white/5 border border-white/10 p-6">
+                                <div class="flex flex-wrap items-baseline justify-between gap-2 mb-4">
+                                    <div>
+                                        <span class="text-xs font-bold uppercase tracking-wider text-ice-300 block mb-1">WINTER (한겨울)</span>
+                                        <span class="font-bold text-lg text-white">한겨울 아이스커피 비중</span>
+                                    </div>
+                                    <span class="font-serif text-4xl sm:text-5xl font-black text-[#38BDF8] counter" data-target="60" data-suffix="%">0%</span>
+                                </div>
+
+                                <!-- 커피잔 10개 중 6개가 아이스커피로 순차 채워지는 인터랙티브 인포그래픽 -->
+                                <div class="grid grid-cols-5 sm:grid-cols-10 gap-2 pt-2" id="korea-cups-grid" aria-label="10잔 중 6잔 아이스커피">
+                                    <!-- 1~6잔: 아이스커피 (스크롤 시 순차 점등) -->
+                                    <div class="cup-item ice-cup flex flex-col items-center p-2 rounded-xl bg-white/5 border border-white/10 text-latte-300/60 transition-all duration-500" title="아이스커피">
+                                        <span class="text-lg">🧊</span>
+                                        <span class="text-[10px] font-bold mt-1">ICE</span>
+                                    </div>
+                                    <div class="cup-item ice-cup flex flex-col items-center p-2 rounded-xl bg-white/5 border border-white/10 text-latte-300/60 transition-all duration-500" title="아이스커피">
+                                        <span class="text-lg">🧊</span>
+                                        <span class="text-[10px] font-bold mt-1">ICE</span>
+                                    </div>
+                                    <div class="cup-item ice-cup flex flex-col items-center p-2 rounded-xl bg-white/5 border border-white/10 text-latte-300/60 transition-all duration-500" title="아이스커피">
+                                        <span class="text-lg">🧊</span>
+                                        <span class="text-[10px] font-bold mt-1">ICE</span>
+                                    </div>
+                                    <div class="cup-item ice-cup flex flex-col items-center p-2 rounded-xl bg-white/5 border border-white/10 text-latte-300/60 transition-all duration-500" title="아이스커피">
+                                        <span class="text-lg">🧊</span>
+                                        <span class="text-[10px] font-bold mt-1">ICE</span>
+                                    </div>
+                                    <div class="cup-item ice-cup flex flex-col items-center p-2 rounded-xl bg-white/5 border border-white/10 text-latte-300/60 transition-all duration-500" title="아이스커피">
+                                        <span class="text-lg">🧊</span>
+                                        <span class="text-[10px] font-bold mt-1">ICE</span>
+                                    </div>
+                                    <div class="cup-item ice-cup flex flex-col items-center p-2 rounded-xl bg-white/5 border border-white/10 text-latte-300/60 transition-all duration-500" title="아이스커피">
+                                        <span class="text-lg">🧊</span>
+                                        <span class="text-[10px] font-bold mt-1">ICE</span>
+                                    </div>
+                                    <!-- 7~10잔: 따뜻한 커피 -->
+                                    <div class="cup-item flex flex-col items-center p-2 rounded-xl bg-white/5 border border-white/10 text-latte-300/50" title="따뜻한 커피">
+                                        <span class="text-lg opacity-70">☕</span>
+                                        <span class="text-[10px] mt-1">HOT</span>
+                                    </div>
+                                    <div class="cup-item flex flex-col items-center p-2 rounded-xl bg-white/5 border border-white/10 text-latte-300/50" title="따뜻한 커피">
+                                        <span class="text-lg opacity-70">☕</span>
+                                        <span class="text-[10px] mt-1">HOT</span>
+                                    </div>
+                                    <div class="cup-item flex flex-col items-center p-2 rounded-xl bg-white/5 border border-white/10 text-latte-300/50" title="따뜻한 커피">
+                                        <span class="text-lg opacity-70">☕</span>
+                                        <span class="text-[10px] mt-1">HOT</span>
+                                    </div>
+                                    <div class="cup-item flex flex-col items-center p-2 rounded-xl bg-white/5 border border-white/10 text-latte-300/50" title="따뜻한 커피">
+                                        <span class="text-lg opacity-70">☕</span>
+                                        <span class="text-[10px] mt-1">HOT</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 대서 97% 피크 바 -->
+                            <div class="rounded-3xl bg-gradient-to-r from-ice-900/60 to-[#2E1F16] border border-[#38BDF8]/30 p-6">
+                                <div class="flex flex-wrap items-baseline justify-between gap-2 mb-3">
+                                    <div>
+                                        <span class="text-xs font-bold uppercase tracking-wider text-amber-300 block mb-1">PEAK SUMMER (대서)</span>
+                                        <span class="font-bold text-base sm:text-lg text-white">대서에는 아이스커피 비중이 97%까지</span>
+                                    </div>
+                                    <span class="font-serif text-4xl sm:text-5xl font-black text-white counter" data-target="97" data-suffix="%">0%</span>
+                                </div>
+                                <div class="w-full h-3.5 bg-[#120B07] rounded-full overflow-hidden p-0.5">
+                                    <div class="bar-fill h-full rounded-full bg-gradient-to-r from-[#0EA5E9] via-ice-300 to-white" style="width: 0%" data-width="97%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="mt-6 text-xs text-latte-300/80 leading-relaxed">
+                            출처: 메가MGC커피 · 지난해 전국 약 4000개 매장, 커피 주문 약 4억건 분석
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- -----------------------------------------------------------------
+             SECTION 05 | 커피 공식이 바뀐다
+        ------------------------------------------------------------------ -->
+        <section id="section-05" class="scroll-mt-24 reveal-up">
+            <div class="relative rounded-[2rem] bg-gradient-to-b from-latte-100 to-white border border-latte-200 p-8 sm:p-12 lg:p-16 text-center shadow-sm overflow-hidden">
+                
+                <!-- 장식용 상단 구분선 -->
+                <div class="inline-flex items-center gap-2 text-[#0EA5E9] font-bold text-sm tracking-wider uppercase mb-4">
+                    <span class="px-3 py-1 rounded-md bg-ice-100 text-ice-900">05 | 커피 공식이 바뀐다</span>
+                </div>
+
+                <h2 class="font-serif text-2xl sm:text-4xl md:text-5xl font-bold text-[#1E140E] leading-tight max-w-3xl mx-auto mb-10">
+                    뜨거운 커피의 본고장에도<br />
+                    <span class="text-[#0EA5E9]">'ICE'</span>가 일상이 됐다
+                </h2>
+
+                <!-- 핵심 키워드 스포트라이트 박스: 얼죽아 -->
+                <div class="max-w-2xl mx-auto rounded-3xl bg-white border-2 border-ice-200 p-7 sm:p-10 shadow-md mb-10 relative">
+                    <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#1E140E] text-ice-300 font-serif font-bold text-lg sm:text-xl tracking-wide shadow-sm mb-5">
+                        <span>🧊 얼죽아</span>
+                        <span class="text-xs font-sans font-normal text-latte-300 border-l border-white/20 pl-2">얼어 죽어도 아이스 아메리카노</span>
+                    </div>
+                    <p class="text-espresso-800 text-base sm:text-xl leading-relaxed font-medium">
+                        '얼어 죽어도 아이스 아메리카노'. 한국에서 먼저 익숙해진 이 소비 방식이 이제 유럽의 커피 문화 변화와도 맞닿고 있습니다.
+                    </p>
+                </div>
+
+                <!-- 마무리 에디토리얼 문장 -->
+                <div class="max-w-2xl mx-auto">
+                    <div class="w-12 h-1 bg-[#0EA5E9] mx-auto rounded-full mb-6"></div>
+                    <p class="font-serif text-lg sm:text-2xl text-[#1E140E] font-semibold leading-relaxed">
+                        기후와 세대 취향이 만나면서,<br class="hidden sm:inline" />
+                        아이스커피는 더 이상 여름철 메뉴에만 머물지 않고 있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =====================================================================
+         FOOTER: 출처 요약 및 맨 위로 이동
+    ====================================================================== -->
+    <footer class="bg-[#1E140E] text-latte-300 border-t border-white/10 py-12 px-6">
+        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="text-center sm:text-left">
+                <p class="font-serif text-white font-bold text-base">
+                    뜨거운 커피의 본고장에도 'ICE'가 일상이 됐다
+                </p>
+                <p class="text-xs text-latte-400 mt-1.5">
+                    데이터 출처: 룩셈부르크 시장조사업체 파이어(Fyre) · 닐슨아이큐(NIQ) '2027 음료 시장 보고서' · 메가MGC커피 주문 데이터 분석
+                </p>
+            </div>
+            <button 
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                class="px-5 py-2.5 rounded-full bg-white/10 hover:bg-[#0EA5E9] hover:text-white text-xs font-semibold text-latte-100 transition-all cursor-pointer"
+            >
+                맨 위로 이동 ↑
+            </button>
+        </div>
+    </footer>
+
+    <!-- =====================================================================
+         INTERACTIVE SCRIPTS: 스크롤 애니메이션, 카운터, 프로그레스 바, 내비게이션
+    ====================================================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. 상단 읽기 진행률 바 업데이트
+            const progressBar = document.getElementById('reading-progress');
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                progressBar.style.width = `${progress}%`;
+            }, { passive: true });
+
+            // 2. 숫자 카운트업 애니메이션 함수 (접두사 '+' 및 접미사 '%' 지원)
+            function animateCounter(el) {
+                if (el.dataset.animated === 'true') return;
+                el.dataset.animated = 'true';
+
+                const target = parseInt(el.dataset.target, 10);
+                const prefix = el.dataset.prefix || '';
+                const suffix = el.dataset.suffix || '';
+                const duration = 1200;
+                const startTime = performance.now();
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easeProgress = 1 - Math.pow(1 - progress, 4);
+                    const currentVal = Math.round(easeProgress * target);
+                    el.textContent = `${prefix}${currentVal}${suffix}`;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        el.textContent = `${prefix}${target}${suffix}`;
+                    }
+                }
+                requestAnimationFrame(update);
+            }
+
+            // 3. 한국 한겨울 10잔 중 6잔 순차 채우기 애니메이션
+            function animateKoreaCups(sectionEl) {
+                const iceCups = sectionEl.querySelectorAll('.ice-cup');
+                if (!iceCups.length || sectionEl.dataset.cupsAnimated === 'true') return;
+                sectionEl.dataset.cupsAnimated = 'true';
+
+                iceCups.forEach((cup, index) => {
+                    setTimeout(() => {
+                        cup.classList.remove('bg-white/5', 'border-white/10', 'text-latte-300/60');
+                        cup.classList.add('bg-[#0EA5E9]/25', 'border-[#38BDF8]/60', 'text-ice-300', 'scale-105');
+                        setTimeout(() => cup.classList.remove('scale-105'), 250);
+                    }, index * 140);
+                });
+            }
+
+            // 4. IntersectionObserver로 섹션 등장, 차트 바 채우기, 카운터 실행
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -80px 0px',
+                threshold: 0.15
+            };
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+
+                        // 내부 카운터 애니메이션 트리거
+                        const counters = entry.target.querySelectorAll('.counter');
+                        counters.forEach(counter => animateCounter(counter));
+
+                        // 내부 가로 막대 그래프 트리거
+                        const bars = entry.target.querySelectorAll('.bar-fill');
+                        bars.forEach(bar => {
+                            const targetWidth = bar.dataset.width;
+                            if (targetWidth) {
+                                setTimeout(() => {
+                                    bar.style.width = targetWidth;
+                                }, 150);
+                            }
+                        });
+
+                        // 섹션 04 커피잔 6개 순차 점등 트리거
+                        if (entry.target.id === 'section-04') {
+                            animateKoreaCups(entry.target);
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-up').forEach(section => {
+                revealObserver.observe(section);
+            });
+
+            // 5. 스티키 내비게이션 활성 섹션 하이라이트
+            const sections = document.querySelectorAll('main section[id]');
+            const navPills = document.querySelectorAll('.nav-pill');
+
+            const navObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navPills.forEach(pill => {
+                            if (pill.dataset.target === id) {
+                                pill.classList.remove('bg-transparent', 'text-espresso-700', 'font-medium');
+                                pill.classList.add('bg-[#1E140E]', 'text-white', 'font-semibold', 'shadow-sm');
+                                pill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                            } else {
+                                pill.classList.remove('bg-[#1E140E]', 'text-white', 'font-semibold', 'shadow-sm');
+                                pill.classList.add('text-espresso-700', 'font-medium');
+                            }
+                        });
+                    }
+                });
+            }, {
+                rootMargin: '-30% 0px -55% 0px',
+                threshold: 0
+            });
+
+            sections.forEach(sec => navObserver.observe(sec));
+        });
+
+        // 6. 유럽 국가 차트 행 클릭 시 강조 토글 인터랙션
+        function highlightCountry(rowEl) {
+            const allRows = document.querySelectorAll('#europe-bars > div');
+            allRows.forEach(r => r.classList.remove('bg-ice-50', 'ring-1', 'ring-ice-300'));
+            rowEl.classList.add('bg-ice-50', 'ring-1', 'ring-ice-300');
+        }
+    </script>
+</body>
+</html>
